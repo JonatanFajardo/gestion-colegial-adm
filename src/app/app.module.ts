@@ -3,11 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { Name1Component } from './name1/name1.component';
-import { Name2Component } from './name2/name2.component';
-import { FormularioComponent } from './Materias/formulario/formulario.component';
+// import { FormularioComponent } from './Materias/formulario/formulario.component';
 import { MateriasComponent } from './materias/materias.component';
-import { ListadoComponent } from './Materias2/listado/listado.component';
 import { ModalidadesComponent } from './modalidades/modalidades.component';
 import { NivelesEducativosComponent } from './niveles-educativos/niveles-educativos.component';
 import { NotasComponent } from './notas/notas.component';
@@ -29,15 +26,14 @@ import { HomeComponent } from './home/home.component';
 import { HorarioAlumnosComponent } from './horario-alumnos/horario-alumnos.component';
 import { HorarioProfesoresComponent } from './horario-profesores/horario-profesores.component';
 import { HorasComponent } from './horas/horas.component';
+import { DxButtonModule, DxTextBoxModule } from 'devextreme-angular';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Name1Component,
-    Name2Component,
-    FormularioComponent,
+    // FormularioComponent,
     MateriasComponent,
-    ListadoComponent,
+    // ListadoComponent,
     ModalidadesComponent,
     NivelesEducativosComponent,
     NotasComponent,
@@ -58,11 +54,13 @@ import { HorasComponent } from './horas/horas.component';
     HomeComponent,
     HorarioAlumnosComponent,
     HorarioProfesoresComponent,
-    HorasComponent
+    HorasComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DxButtonModule,
+    DxTextBoxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
