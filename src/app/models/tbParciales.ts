@@ -1,4 +1,4 @@
-﻿export interface tbParciales {
+﻿export class tbParciales {
     pac_Id: number;
     pac_Descripcion: string;
     pac_EsEliminado: boolean;

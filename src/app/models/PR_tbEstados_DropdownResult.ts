@@ -1,4 +1,4 @@
-﻿export interface PR_tbEstados_DropdownResult {
+﻿export class PR_tbEstados_DropdownResult {
     est_Id: number;
     est_Descripcion: string;
 }

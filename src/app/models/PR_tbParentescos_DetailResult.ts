@@ -1,4 +1,4 @@
-﻿export interface PR_tbParentescos_DetailResult {
+﻿export class PR_tbParentescos_DetailResult {
     par_Id: number | null;
     par_Descripcion: string;
     par_UsuarioRegistraNombre: string;

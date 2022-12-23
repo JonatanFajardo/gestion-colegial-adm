@@ -1,4 +1,4 @@
-﻿export interface tbTitulos {
+﻿export class tbTitulos {
     tit_Id: number;
     tit_Descripcion: string;
     tit_EsEliminado: boolean;

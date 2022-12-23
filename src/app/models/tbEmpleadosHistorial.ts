@@ -1,4 +1,4 @@
-﻿export interface tbEmpleadosHistorial {
+﻿export class tbEmpleadosHistorial {
     emp_Id: number;
     emp_Codigo: string;
     per_Id: number | null;

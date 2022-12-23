@@ -1,4 +1,4 @@
-﻿export interface PR_tbTitulos_DetailResult {
+﻿export class PR_tbTitulos_DetailResult {
     tit_Id: number | null;
     tit_Descripcion: string;
     tit_UsuarioRegistraNombre: string;

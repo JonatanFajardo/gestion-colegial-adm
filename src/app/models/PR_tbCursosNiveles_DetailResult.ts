@@ -1,4 +1,4 @@
-﻿export interface PR_tbCursosNiveles_DetailResult {
+﻿export class PR_tbCursosNiveles_DetailResult {
     cun_Id: number | null;
     cun_Descripcion: string;
     cun_UsuarioRegistraNombre: string;

@@ -1,4 +1,4 @@
-﻿export interface tbEstados {
+﻿export class tbEstados {
     est_Id: number;
     est_Descripcion: string;
     est_EsEliminado: boolean;

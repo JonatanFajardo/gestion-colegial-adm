@@ -1,4 +1,4 @@
-﻿export interface tbEmpleados_tbMaterias {
+﻿export class tbEmpleados_tbMaterias {
     emp_Id: number;
     mat_Id: number;
 }

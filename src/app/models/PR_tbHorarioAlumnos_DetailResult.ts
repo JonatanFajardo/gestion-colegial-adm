@@ -1,4 +1,4 @@
-﻿export interface PR_tbHorarioAlumnos_DetailResult {
+﻿export class PR_tbHorarioAlumnos_DetailResult {
     hoAl_Id: number | null;
     cur_Nombre: string;
     cun_Descripcion: string;

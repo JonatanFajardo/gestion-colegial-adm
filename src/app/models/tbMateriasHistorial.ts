@@ -1,4 +1,4 @@
-﻿export interface tbMateriasHistorial {
+﻿export class tbMateriasHistorial {
     mat_Id: number;
     mat_Nombre: string;
     dur_Id: number | null;

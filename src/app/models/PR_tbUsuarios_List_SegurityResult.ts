@@ -1,4 +1,4 @@
-﻿export interface PR_tbUsuarios_List_SegurityResult {
+﻿export class PR_tbUsuarios_List_SegurityResult {
     usu_Id: number;
     per_Nombres: string;
     usu_Name: string;

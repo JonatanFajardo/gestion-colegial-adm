@@ -1,4 +1,4 @@
-﻿export interface PR_tbParciales_DetailResult {
+﻿export class PR_tbParciales_DetailResult {
     pac_Id: number | null;
     pac_Descripcion: string;
     pac_UsuarioRegistraNombre: string;

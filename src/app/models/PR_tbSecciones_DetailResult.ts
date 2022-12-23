@@ -1,4 +1,4 @@
-﻿export interface PR_tbSecciones_DetailResult {
+﻿export class PR_tbSecciones_DetailResult {
     sec_Id: number | null;
     sec_Descripcion: string;
     sec_UsuarioRegistraNombre: string;

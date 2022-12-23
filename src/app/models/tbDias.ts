@@ -1,4 +1,4 @@
-﻿export interface tbDias {
+﻿export class tbDias {
     dia_Id: number;
     dia_Descripcion: string;
     dia_EsEliminado: boolean;

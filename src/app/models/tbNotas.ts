@@ -1,4 +1,4 @@
-﻿export interface tbNotas {
+﻿export class tbNotas {
     not_Id: number;
     alu_Id: number | null;
     aul_Id: number | null;

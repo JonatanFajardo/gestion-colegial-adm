@@ -1,4 +1,4 @@
-﻿export interface tbPersonas {
+﻿export class tbPersonas {
     per_Id: number;
     per_Identidad: string;
     per_PrimerNombre: string;

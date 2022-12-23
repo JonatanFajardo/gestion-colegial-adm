@@ -1,4 +1,4 @@
-﻿export interface tbRoles {
+﻿export class tbRoles {
     rol_Id: number;
     rol_Descripcion: string;
     rol_Estado: boolean | null;

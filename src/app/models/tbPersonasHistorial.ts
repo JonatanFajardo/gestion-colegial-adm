@@ -1,4 +1,4 @@
-﻿export interface tbPersonasHistorial {
+﻿export class tbPersonasHistorial {
     per_Id: number;
     per_Identidad: string;
     per_PrimerNombre: string;

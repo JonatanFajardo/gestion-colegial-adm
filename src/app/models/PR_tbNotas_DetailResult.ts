@@ -1,4 +1,4 @@
-﻿export interface PR_tbNotas_DetailResult {
+﻿export class PR_tbNotas_DetailResult {
     not_Id: number | null;
     not_Nota: number | null;
     mat_Nombre: string;

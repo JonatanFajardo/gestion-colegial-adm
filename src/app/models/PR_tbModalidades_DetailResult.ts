@@ -1,4 +1,4 @@
-﻿export interface PR_tbModalidades_DetailResult {
+﻿export class PR_tbModalidades_DetailResult {
     mda_Id: number | null;
     mda_Descripcion: string;
     mda_UsuarioRegistraNombre: string;

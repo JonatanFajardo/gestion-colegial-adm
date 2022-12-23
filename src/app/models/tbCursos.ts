@@ -1,4 +1,4 @@
-﻿export interface tbCursos {
+﻿export class tbCursos {
     cur_Id: number;
     cur_Nombre: string;
     niv_Id: number;

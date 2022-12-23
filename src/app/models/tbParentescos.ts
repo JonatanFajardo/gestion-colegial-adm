@@ -1,4 +1,4 @@
-﻿export interface tbParentescos {
+﻿export class tbParentescos {
     par_Id: number;
     par_Descripcion: string;
     par_EsEliminado: boolean;

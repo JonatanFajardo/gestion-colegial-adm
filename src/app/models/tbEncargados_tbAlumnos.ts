@@ -1,4 +1,4 @@
-﻿export interface tbEncargados_tbAlumnos {
+﻿export class tbEncargados_tbAlumnos {
     enc_Id: number;
     alu_Id: number;
     par_Id: number;

@@ -1,4 +1,4 @@
-﻿export interface tbAulas {
+﻿export class tbAulas {
     aul_Id: number;
     aul_Descripcion: string;
     aul_EsEliminado: boolean;

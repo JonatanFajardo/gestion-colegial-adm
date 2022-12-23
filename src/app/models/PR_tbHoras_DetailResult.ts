@@ -1,4 +1,4 @@
-﻿export interface PR_tbHoras_DetailResult {
+﻿export class PR_tbHoras_DetailResult {
     hor_Id: number | null;
     hor_Hora: string;
     hor_UsuarioRegistraNombre: string;

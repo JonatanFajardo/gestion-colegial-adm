@@ -1,4 +1,4 @@
-﻿export interface tbAlumnos {
+﻿export class tbAlumnos {
     alu_Id: number;
     per_Id: number;
     niv_Id: number | null;

@@ -31,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
-    // AppComponent,
+    AppComponent,
     // FormularioComponent,
     MateriasComponent,
     // ListadoComponent,

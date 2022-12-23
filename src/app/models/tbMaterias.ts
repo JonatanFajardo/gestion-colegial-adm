@@ -1,4 +1,4 @@
-﻿export interface tbMaterias {
+﻿export class tbMaterias {
     mat_Id: number;
     mat_Nombre: string;
     dur_Id: number;

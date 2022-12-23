@@ -1,3 +1,3 @@
-﻿export interface PR_tbAlumnos_DetailResult {
+﻿export class PR_tbAlumnos_DetailResult {
 
 }

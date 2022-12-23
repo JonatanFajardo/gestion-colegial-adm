@@ -1,4 +1,4 @@
-﻿export interface PR_tbDias_DetailResult {
+﻿export class PR_tbDias_DetailResult {
     dia_Id: number | null;
     dia_Descripcion: string;
     dia_UsuarioRegistraNombre: string;

@@ -1,4 +1,4 @@
-﻿export interface tbModalidades {
+﻿export class tbModalidades {
     mda_Id: number;
     mda_Descripcion: string;
     mda_EsEliminado: boolean;

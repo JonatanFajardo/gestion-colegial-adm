@@ -1,4 +1,4 @@
-﻿export interface PR_tbSemestres_DetailResult {
+﻿export class PR_tbSemestres_DetailResult {
     sem_Id: number | null;
     sem_Descripcion: string;
     sem_EsActivo: string;

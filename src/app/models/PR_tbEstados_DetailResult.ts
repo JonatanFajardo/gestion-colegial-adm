@@ -1,4 +1,4 @@
-﻿export interface PR_tbEstados_DetailResult {
+﻿export class PR_tbEstados_DetailResult {
     est_Id: number | null;
     est_Descripcion: string;
     est_UsuarioRegistraNombre: string;

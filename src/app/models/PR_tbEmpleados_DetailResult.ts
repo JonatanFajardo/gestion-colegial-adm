@@ -1,4 +1,4 @@
-﻿export interface PR_tbEmpleados_DetailResult {
+﻿export class PR_tbEmpleados_DetailResult {
     emp_Id: number | null;
     emp_Codigo: string;
     per_Identidad: string;

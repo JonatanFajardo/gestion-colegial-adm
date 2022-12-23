@@ -1,4 +1,4 @@
-﻿export interface PR_tbAlumnos_DetailResult {
+﻿export class PR_tbAlumnos_DetailResult {
     alu_Id: number | null;
     per_Identidad: string;
     per_PrimerNombre: string;

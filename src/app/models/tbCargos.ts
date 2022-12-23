@@ -1,4 +1,4 @@
-﻿export interface tbCargos {
+﻿export class tbCargos {
     car_Id: number;
     car_Descripcion: string;
     car_EsEliminado: boolean;

@@ -1,4 +1,4 @@
-﻿export interface tbEmpleados {
+﻿export class tbEmpleados {
     emp_Id: number;
     emp_Codigo: string;
     per_Id: number;

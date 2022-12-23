@@ -1,4 +1,4 @@
-﻿export interface tbNivelesEducativos {
+﻿export class tbNivelesEducativos {
     niv_Id: number;
     niv_Descripcion: string;
     niv_EsActivo: boolean | null;

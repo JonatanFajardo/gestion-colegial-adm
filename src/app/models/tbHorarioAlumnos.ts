@@ -1,4 +1,4 @@
-﻿export interface tbHorarioAlumnos {
+﻿export class tbHorarioAlumnos {
     hoAl_Id: number;
     cur_Id: number;
     cun_Id: number;

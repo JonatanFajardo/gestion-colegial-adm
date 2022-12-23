@@ -1,4 +1,4 @@
-﻿export interface tbSemestres {
+﻿export class tbSemestres {
     sem_Id: number;
     sem_Descripcion: string;
     sem_EsActivo: boolean | null;

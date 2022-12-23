@@ -1,4 +1,4 @@
-﻿export interface tbCursosHistorial {
+﻿export class tbCursosHistorial {
     cur_Id: number;
     cno_Id: number | null;
     aul_Id: number | null;

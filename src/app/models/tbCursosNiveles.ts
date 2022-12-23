@@ -1,4 +1,4 @@
-﻿export interface tbCursosNiveles {
+﻿export class tbCursosNiveles {
     cun_Id: number;
     cun_Descripcion: string;
     niv_Id: number;

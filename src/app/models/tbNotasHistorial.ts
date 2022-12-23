@@ -1,4 +1,4 @@
-﻿export interface tbNotasHistorial {
+﻿export class tbNotasHistorial {
     not_Id: number;
     not_Nota: number | null;
     mat_Id: number | null;

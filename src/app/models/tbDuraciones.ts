@@ -1,4 +1,4 @@
-﻿export interface tbDuraciones {
+﻿export class tbDuraciones {
     dur_Id: number;
     dur_Descripcion: string;
     dur_EsEliminado: boolean;

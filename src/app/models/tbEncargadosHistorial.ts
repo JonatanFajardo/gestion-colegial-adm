@@ -1,4 +1,4 @@
-﻿export interface tbEncargadosHistorial {
+﻿export class tbEncargadosHistorial {
     enc_Id: number;
     per_Id: number | null;
     esActivo: boolean | null;

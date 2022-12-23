@@ -1,4 +1,4 @@
-﻿export interface PR_tbAlumnos_FindResult {
+﻿export class PR_tbAlumnos_FindResult {
     niv_Id: number | null;
     niv_Descripcion: string;
     cun_Id: number | null;

@@ -1,4 +1,4 @@
-﻿export interface PR_tbEncargados_ListResult {
+﻿export class PR_tbEncargados_ListResult {
     enc_Id: number;
     per_Identidad: string;
     enc_Nombre: string;

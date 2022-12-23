@@ -1,4 +1,4 @@
-﻿export interface PR_tbCargos_DetailResult {
+﻿export class PR_tbCargos_DetailResult {
     car_Id: number | null;
     car_Descripcion: string;
     car_UsuarioRegistraNombre: string;

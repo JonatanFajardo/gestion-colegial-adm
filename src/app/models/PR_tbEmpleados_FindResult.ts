@@ -1,4 +1,4 @@
-﻿export interface PR_tbEmpleados_FindResult {
+﻿export class PR_tbEmpleados_FindResult {
     emp_Id: number;
     emp_Codigo: string;
     per_Id: number;

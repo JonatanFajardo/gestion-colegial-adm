@@ -1,4 +1,4 @@
-﻿export interface tbSecciones {
+﻿export class tbSecciones {
     sec_Id: number;
     sec_Descripcion: string;
     sec_EsEliminado: boolean;

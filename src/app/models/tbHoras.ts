@@ -1,4 +1,4 @@
-﻿export interface tbHoras {
+﻿export class tbHoras {
     hor_Id: number;
     hor_Hora: string;
     hor_EsEliminado: boolean;

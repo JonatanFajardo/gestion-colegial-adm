@@ -1,4 +1,4 @@
-﻿export interface PR_tbDuraciones_DetailResult {
+﻿export class PR_tbDuraciones_DetailResult {
     dur_Id: number | null;
     dur_Descripcion: string;
     dur_UsuarioRegistraNombre: string;

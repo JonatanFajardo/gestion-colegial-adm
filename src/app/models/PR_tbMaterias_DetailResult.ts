@@ -1,4 +1,4 @@
-﻿export interface PR_tbMaterias_DetailResult {
+﻿export class PR_tbMaterias_DetailResult {
     mat_Id: number | null;
     mat_Nombre: string;
     dur_Descripcion: string;

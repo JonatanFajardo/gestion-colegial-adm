@@ -1,4 +1,4 @@
-﻿export interface PR_tbAulas_ListResult {
+﻿export class PR_tbAulas_ListResult {
     aul_Id: number;
     aul_Descripcion: string;
 }

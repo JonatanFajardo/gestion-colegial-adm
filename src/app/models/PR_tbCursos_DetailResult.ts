@@ -1,4 +1,4 @@
-﻿export interface PR_tbCursos_DetailResult {
+﻿export class PR_tbCursos_DetailResult {
     cur_Id: number | null;
     cur_Nombre: string;
     aul_Descripcion: string;
