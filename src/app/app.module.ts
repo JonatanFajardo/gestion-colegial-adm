@@ -1,3 +1,4 @@
+import { HorarioAlumnosFormularioComponent } from './pages/horario-alumnos/horario-alumnos-formulario/horario-alumnos-formulario.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -31,17 +32,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AlumnosFormularioComponent } from './pages/alumnos/alumnos-formulario/alumnos-formulario.component';
 import { CargosFormularioComponent } from './pages/cargos/cargos-formulario/cargos-formulario.component';
 import { CursosFormularioComponent } from './pages/cursos/cursos-formulario/cursos-formulario.component';
-import { CursosnivelesFormularioComponent } from './pages/cursosNiveles/cursosniveles-formulario/cursosniveles-formulario.component';
 import { DiasFormularioComponent } from './pages/dias/dias-formulario/dias-formulario.component';
 import { DuracionesFormularioComponent } from './pages/duraciones/duraciones-formulario/duraciones-formulario.component';
 import { EstadosFormularioComponent } from './pages/estados/estados-formulario/estados-formulario.component';
 import { HomeFormularioComponent } from './pages/home/home-formulario/home-formulario.component';
-import { HorarioalumnosFormularioComponent } from './pages/horarioAlumnos/horarioalumnos-formulario/horarioalumnos-formulario.component';
-import { HorarioprofesoresFormularioComponent } from './pages/horarioProfesores/horarioprofesores-formulario/horarioprofesores-formulario.component';
 import { HorasFormularioComponent } from './pages/horas/horas-formulario/horas-formulario.component';
 import { MateriasFormularioComponent } from './pages/materias/materias-formulario/materias-formulario.component';
 import { ModalidadesFormularioComponent } from './pages/modalidades/modalidades-formulario/modalidades-formulario.component';
-import { NiveleseducativosFormularioComponent } from './pages/nivelesEducativos/niveleseducativos-formulario/niveleseducativos-formulario.component';
 import { NotasFormularioComponent } from './pages/notas/notas-formulario/notas-formulario.component';
 import { ParcialesFormularioComponent } from './pages/parciales/parciales-formulario/parciales-formulario.component';
 import { ParentescosFormularioComponent } from './pages/parentescos/parentescos-formulario/parentescos-formulario.component';
@@ -50,6 +47,8 @@ import { SemestresFormularioComponent } from './pages/semestres/semestres-formul
 import { TitulosFormularioComponent } from './pages/titulos/titulos-formulario/titulos-formulario.component';
 import { EmpleadosFormularioComponent } from './pages/empleados/empleados-formulario/empleados-formulario.component';
 import { EncargadosFormularioComponent } from './pages/encargados/encargados-formulario/encargados-formulario.component';
+import { CursosNivelesFormularioComponent } from './pages/cursos-niveles/cursos-niveles-formulario/cursos-niveles-formulario.component';
+import { NivelesEducativosFormularioComponent } from './pages/niveles-educativos/niveles-educativos-formulario/niveles-educativos-formulario.component';
 
 @NgModule({
   declarations: [
@@ -79,25 +78,26 @@ import { EncargadosFormularioComponent } from './pages/encargados/encargados-for
     AlumnosFormularioComponent,
     CargosFormularioComponent,
     CursosFormularioComponent,
-    CursosnivelesFormularioComponent,
+    CursosNivelesFormularioComponent,
     DiasFormularioComponent,
     DuracionesFormularioComponent,
     EmpleadosFormularioComponent,
     EncargadosFormularioComponent,
     EstadosFormularioComponent,
     HomeFormularioComponent,
-    HorarioalumnosFormularioComponent,
-    HorarioprofesoresFormularioComponent,
+    HorarioAlumnosFormularioComponent,
+    HorarioProfesoresComponent,
     HorasFormularioComponent,
     MateriasFormularioComponent,
     ModalidadesFormularioComponent,
-    NiveleseducativosFormularioComponent,
+    NivelesEducativosFormularioComponent,
     NotasFormularioComponent,
     ParcialesFormularioComponent,
     ParentescosFormularioComponent,
     SeccionesFormularioComponent,
     SemestresFormularioComponent,
-    TitulosFormularioComponent,
+    TitulosFormularioComponent, 
+    CursosNivelesFormularioComponent
   ],
   imports: [
     BrowserModule,
