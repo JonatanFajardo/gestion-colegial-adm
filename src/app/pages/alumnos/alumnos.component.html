@@ -1,1 +1,88 @@
-<p>alumnos works!</p>
+<dx-button
+    text="Click me">
+</dx-button>
+<dx-data-grid
+  id="gridContainer"
+  [dataSource]="alumnos"
+  [remoteOperations]="false"
+  [allowColumnReordering]="true"
+  [rowAlternationEnabled]="true"
+  [showBorders]="true"
+  (onRowClick)="startEdit($event)">
+>
+<dxo-filter-row [visible]="true"></dxo-filter-row>
+  <dxo-paging [pageSize]="10"></dxo-paging>
+  <dxo-pager
+    [showPageSizeSelector]="true"
+    [allowedPageSizes]="[10, 25, 50, 100]"
+  ></dxo-pager>
+  <dxo-search-panel
+    [visible]="true"
+    [highlightCaseSensitive]="true"
+  ></dxo-search-panel>
+  <!-- <dxo-group-panel [visible]="true"></dxo-group-panel> -->
+  <!-- <dxo-grouping [autoExpandAll]="false"></dxo-grouping> -->
+  <dxo-editing 
+  mode="row" 
+  [allowDeleting]="true"
+  [confirmDelete]="true">
+</dxo-editing>
+<dx-button
+    text="Update Cell"
+    (onClick)="updateCell()">
+</dx-button>
+
+<!-- 
+  <dxi-column dataField="Product" [groupIndex]="0"></dxi-column>
+  <dxi-column
+    dataField="Amount"
+    caption="Sale Amount"
+    dataType="number"
+    format="currency"
+    alignment="right"
+  ></dxi-column>
+  <dxi-column
+    caption="Discount %"
+    dataField="Discount"
+    cellTemplate="discountCellTemplate"
+    dataType="number"
+    format="percent"
+    alignment="right"
+    [allowGrouping]="false"
+    cssClass="bullet"
+  ></dxi-column> -->
+  <!-- <dxi-column dataField="SaleDate" dataType="date"></dxi-column> -->
+   <dxi-column dataField="alu_Id" caption="Id" dataType="number"></dxi-column>
+   <dxi-column dataField="per_Identidad" caption="Identidad" dataType="string"></dxi-column>
+  <dxi-column dataField="alu_Nombre" caption="Nombre" dataType="string"></dxi-column>
+  <dxi-column dataField="cno_Descripcion" caption="Curso" dataType="string"></dxi-column>
+  <dxi-column dataField="est_Descripcion" caption="Estado" dataType="string" [width]="150"></dxi-column> 
+
+  
+</dx-data-grid>
+
+<div class="container">
+  <!-- Listado -->
+  <div class="card">
+    <div class="card-header" style="background-color: white">
+      <div class="row space-between">
+        <div class="col-md-9"><h3>Listado de alumnos</h3></div>
+        <!-- <div class="col-md-3"><button class="btn btn-primary mdi mdi-plus-circle-outline float-right" id="add-btn" data-toggle="modal" data-target="#edit-modal">  Nuevo</button></div> -->
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="table table-striped table-bordered nowrap" id="datatable">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Identidad</th>
+            <th>Nombre</th>
+            <th>Curso</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </div>
+</div>

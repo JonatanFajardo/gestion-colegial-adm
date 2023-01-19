@@ -26,23 +26,34 @@ import { HomeComponent } from './pages/home/home.component';
 import { HorarioAlumnosComponent } from './pages/horario-alumnos/horario-alumnos.component';
 import { HorarioProfesoresComponent } from './pages/horario-profesores/horario-profesores.component';
 import { HorasComponent } from './pages/horas/horas.component';
-import { DxButtonModule, DxTextBoxModule } from 'devextreme-angular';
+import { DxButtonModule, DxDataGridModule, DxFormModule, DxLookupModule, DxTextBoxModule } from 'devextreme-angular';
 import { HttpClientModule } from '@angular/common/http';
+import { AlumnosFormularioComponent } from './pages/alumnos/alumnos-formulario/alumnos-formulario.component';
+import { CargosFormularioComponent } from './pages/cargos/cargos-formulario/cargos-formulario.component';
+import { CursosFormularioComponent } from './pages/cursos/cursos-formulario/cursos-formulario.component';
+import { CursosnivelesFormularioComponent } from './pages/cursosNiveles/cursosniveles-formulario/cursosniveles-formulario.component';
+import { DiasFormularioComponent } from './pages/dias/dias-formulario/dias-formulario.component';
+import { DuracionesFormularioComponent } from './pages/duraciones/duraciones-formulario/duraciones-formulario.component';
+import { EstadosFormularioComponent } from './pages/estados/estados-formulario/estados-formulario.component';
+import { HomeFormularioComponent } from './pages/home/home-formulario/home-formulario.component';
+import { HorarioalumnosFormularioComponent } from './pages/horarioAlumnos/horarioalumnos-formulario/horarioalumnos-formulario.component';
+import { HorarioprofesoresFormularioComponent } from './pages/horarioProfesores/horarioprofesores-formulario/horarioprofesores-formulario.component';
+import { HorasFormularioComponent } from './pages/horas/horas-formulario/horas-formulario.component';
+import { MateriasFormularioComponent } from './pages/materias/materias-formulario/materias-formulario.component';
+import { ModalidadesFormularioComponent } from './pages/modalidades/modalidades-formulario/modalidades-formulario.component';
+import { NiveleseducativosFormularioComponent } from './pages/nivelesEducativos/niveleseducativos-formulario/niveleseducativos-formulario.component';
+import { NotasFormularioComponent } from './pages/notas/notas-formulario/notas-formulario.component';
+import { ParcialesFormularioComponent } from './pages/parciales/parciales-formulario/parciales-formulario.component';
+import { ParentescosFormularioComponent } from './pages/parentescos/parentescos-formulario/parentescos-formulario.component';
+import { SeccionesFormularioComponent } from './pages/secciones/secciones-formulario/secciones-formulario.component';
+import { SemestresFormularioComponent } from './pages/semestres/semestres-formulario/semestres-formulario.component';
+import { TitulosFormularioComponent } from './pages/titulos/titulos-formulario/titulos-formulario.component';
+import { EmpleadosFormularioComponent } from './pages/empleados/empleados-formulario/empleados-formulario.component';
+import { EncargadosFormularioComponent } from './pages/encargados/encargados-formulario/encargados-formulario.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    // FormularioComponent,
-    MateriasComponent,
-    // ListadoComponent,
-    ModalidadesComponent,
-    NivelesEducativosComponent,
-    NotasComponent,
-    ParcialesComponent,
-    ParentescosComponent,
-    SeccionesComponent,
-    SemestresComponent,
-    TitulosComponent,
+    AppComponent, 
     AlumnosComponent,
     CargosComponent,
     CursosComponent,
@@ -56,13 +67,48 @@ import { HttpClientModule } from '@angular/common/http';
     HorarioAlumnosComponent,
     HorarioProfesoresComponent,
     HorasComponent,
+    MateriasComponent, 
+    ModalidadesComponent,
+    NivelesEducativosComponent,
+    NotasComponent,
+    ParcialesComponent,
+    ParentescosComponent,
+    SeccionesComponent,
+    SemestresComponent,
+    TitulosComponent,
+    AlumnosFormularioComponent,
+    CargosFormularioComponent,
+    CursosFormularioComponent,
+    CursosnivelesFormularioComponent,
+    DiasFormularioComponent,
+    DuracionesFormularioComponent,
+    EmpleadosFormularioComponent,
+    EncargadosFormularioComponent,
+    EstadosFormularioComponent,
+    HomeFormularioComponent,
+    HorarioalumnosFormularioComponent,
+    HorarioprofesoresFormularioComponent,
+    HorasFormularioComponent,
+    MateriasFormularioComponent,
+    ModalidadesFormularioComponent,
+    NiveleseducativosFormularioComponent,
+    NotasFormularioComponent,
+    ParcialesFormularioComponent,
+    ParentescosFormularioComponent,
+    SeccionesFormularioComponent,
+    SemestresFormularioComponent,
+    TitulosFormularioComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     DxButtonModule,
     DxTextBoxModule,
-    HttpClientModule
+    DxFormModule,
+    HttpClientModule,
+    DxDataGridModule,
+    DxLookupModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

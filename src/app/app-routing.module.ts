@@ -1,3 +1,4 @@
+import { AlumnosFormularioComponent } from './pages/alumnos/alumnos-formulario/alumnos-formulario.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AlumnosComponent } from './pages/alumnos/alumnos.component';
@@ -40,6 +41,7 @@ const routes: Routes = [
   {path: 'semestres', component: SemestresComponent},
   {path: 'titulos', component: TitulosComponent},
   {path: 'alumnos', component: AlumnosComponent},
+  {path: 'alumnos/form', component: AlumnosFormularioComponent},
   {path: 'cargos', component: CargosComponent},
   {path: 'cursos', component: CursosComponent},
   {path: 'cursosniveles', component: CursosNivelesComponent},
