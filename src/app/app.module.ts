@@ -1,10 +1,8 @@
-import { HorarioAlumnosFormularioComponent } from './pages/horario-alumnos/horario-alumnos-formulario/horario-alumnos-formulario.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import { FormularioComponent } from './Materias/formulario/formulario.component';
+import { HorarioAlumnosFormularioComponent } from './pages/horario-alumnos/horario-alumnos-formulario/horario-alumnos-formulario.component';
 import { MateriasComponent } from './pages/materias/materias.component';
 import { ModalidadesComponent } from './pages/modalidades/modalidades.component';
 import { NivelesEducativosComponent } from './pages/niveles-educativos/niveles-educativos.component';
@@ -49,6 +47,7 @@ import { EmpleadosFormularioComponent } from './pages/empleados/empleados-formul
 import { EncargadosFormularioComponent } from './pages/encargados/encargados-formulario/encargados-formulario.component';
 import { CursosNivelesFormularioComponent } from './pages/cursos-niveles/cursos-niveles-formulario/cursos-niveles-formulario.component';
 import { NivelesEducativosFormularioComponent } from './pages/niveles-educativos/niveles-educativos-formulario/niveles-educativos-formulario.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -107,7 +106,8 @@ import { NivelesEducativosFormularioComponent } from './pages/niveles-educativos
     DxFormModule,
     HttpClientModule,
     DxDataGridModule,
-    DxLookupModule
+    DxLookupModule,
+    NgbModule
 
   ],
   providers: [],
