@@ -1,12 +1,54 @@
 <div class="container">
+  <dx-form
+  id="form"
+ 
+  [readOnly]="readOnly"
+  [labelMode]="labelMode"
+  [showColonAfterLabel]="showColon"
+  [labelLocation]="labelLocation"
+  [minColWidth]="minColWidth"
+  [colCount]="colCount"
+  [width]="width"
+>
+
+</dx-form>
   <!-- @using (Html.BeginForm("Save", "Alumnos", FormMethod.Post, new { enctype = "multipart/form-data" }))
     { -->
+<!--         
+      <dx-form class="form" [colCount]="2">
+        <div class="dx-fieldset">
+          <div class="dx-field">
+            <div class="dx-field-label">Default mode</div>
+            <div class="dx-field-value">
+              <dx-text-box value="John Smith"></dx-text-box>
+            </div>
+          </div>
+          
+          
         
-  <div class="card"><p>s</p></div>
-
-  <div class="card">
+          <div class="dx-field">
+            <div class="dx-field-label">Text mask</div>
+            <div class="dx-field-value">
+              <dx-text-box mask="+1 (X00) 000-0000" [maskRules]="rules">
+              </dx-text-box>
+            </div>
+          </div>
+          <div class="dx-field">
+            <div class="dx-field-label">Email (read only)</div>
+            <div class="dx-field-value">
+              <dx-text-box
+                [readOnly]="true"
+                [hoverStateEnabled]="false"
+                [(value)]="emailValue"
+              ></dx-text-box>
+            </div>
+          </div>
+        </div>
+       
+      </dx-form> -->
+  
     <dx-form [formData]="employee" [colCount]="2" labelLocation="top">
-      <dxi-item itemType="group" [colCount]="2" caption="Informción personal">
+      <dxi-item itemType="group" [colCount]="2" caption="Información personal">
         <dxi-item dataField="Identidad"></dxi-item>
         <dxi-item dataField="Primer Nombre"></dxi-item>
         <dxi-item dataField="Segundo Nombre"></dxi-item>
@@ -18,17 +60,24 @@
         <dxi-item itemType="empty" [colSpan]="2"> </dxi-item>
 
         <dxi-item dataField="Correo Electronico"></dxi-item>
-        <dxi-item dataField="Teléfono"></dxi-item>
+        <!-- <dx-text-box dataField="Teléfono" mask="+504 0000-0000" maskChar="‒"></dx-text-box> -->
         <dxi-item itemType="empty" [colSpan]="2"> </dxi-item>
+        <dxi-item dataField="Dirección" [colSpan]="2"></dxi-item>
         <dxi-item dataField="Dirección" [colSpan]="2"></dxi-item>
       </dxi-item>
 
-      <dxi-item itemType="group" caption="Informción del empleado">
+      <dxi-item itemType="group" caption="Información del empleado">
         <div class="dx-fieldset">
             <div class="dx-fieldset-header">Nivel educativo</div>
             <div class="dx-field">
-              <dx-lookup [items]="NivelEducativo" >
-                <!-- <dxo-drop-down-options [showTitle]="false"></dxo-drop-down-options> -->
+              <dx-lookup [items]="NivelesEducativos" [value]="NivelesEducativos[0].niv_Id"  valueExpr="niv_Id"  displayExpr="niv_Descripcion">
+                <dxo-drop-down-options [showTitle]="false"></dxo-drop-down-options>
+                <!-- <div *dxTemplate="let item of NivelesEducativos"> -->
+                  <!-- <div class="custom-field">
+                     <div>{{ item.niv_Id }} {{ item.niv_Descripcion }} </div
+                    >
+                  </div> -->
+                <!-- </div> -->
               </dx-lookup>
             </div>
           </div>
@@ -44,12 +93,13 @@
 
       <!-- } -->
     </dx-form>
+
     <form>
      <div class="row">
         <div class="col-lg-7">
           <div class="card">
             <div class="card-header">
-              <h3>Informción personal</h3>
+              <h3>Información personal</h3>
             </div>
 
             <div class="card-body">
@@ -61,7 +111,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Identidad</label>
-                    <input type="text" dataField="Identidad">
+                    <input type="text" class="form-control" dataField="Identidad">
                     <!-- @Html.LabelFor(model => model.Per_Identidad, "Identidad", htmlAttributes: new { @class = "control-label" }) -->
                     <!-- @Html.EditorFor(model => model.Per_Identidad, new { htmlAttributes = new { type = "number", @class = "form-control", @minlength = "13" } }) -->
                     <!-- @Html.ValidationMessageFor(model => model.Per_Identidad, "", new { @class = "text-danger" }) -->
@@ -71,7 +121,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Primer Nombre</label>
-                    <input type="text" dataField="Primer Nombre">
+                    <input type="text" class="form-control" dataField="Primer Nombre">
                     <!-- @Html.LabelFor(model => model.Per_PrimerNombre, "Primer Nombre", htmlAttributes: new { @class = "control-label" }) -->
                     <!-- @Html.EditorFor(model => model.Per_PrimerNombre, new { htmlAttributes = new { @class = "form-control" } }) -->
                     <!-- @Html.ValidationMessageFor(model => model.Per_PrimerNombre, "", new { @class = "text-danger" }) -->
@@ -83,7 +133,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Segundo Nombre</label>
-                    <input type="text" dataField="Segundo Nombre">
+                    <input type="text" class="form-control" dataField="Segundo Nombre">
                     <!-- @Html.LabelFor(model => model.Per_SegundoNombre, "Segundo Nombre", htmlAttributes: new { @class = "control-label" }) -->
                     <!-- @Html.EditorFor(model => model.Per_SegundoNombre, new { htmlAttributes = new { @class = "form-control" } }) -->
                     <!-- @Html.ValidationMessageFor(model => model.Per_SegundoNombre, "", new { @class = "text-danger" }) -->
@@ -93,7 +143,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Apellido Paterno</label>
-                    <input type="text" dataField="Apellido Paterno">
+                    <input type="text" class="form-control" dataField="Apellido Paterno">
                     <!-- @Html.LabelFor(model => model.Per_ApellidoPaterno, "Apellido Paterno", htmlAttributes: new { @class = "control-label" }) -->
                     <!-- @Html.EditorFor(model => model.Per_ApellidoPaterno, new { htmlAttributes = new { @class = "form-control" } }) -->
                     <!-- @Html.ValidationMessageFor(model => model.Per_ApellidoPaterno, "", new { @class = "text-danger" }) -->
@@ -105,7 +155,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Apellido Materno</label>
-                    <input type="text" dataField="Apellido Materno">
+                    <input type="text" class="form-control" dataField="Apellido Materno">
                     <!-- @Html.LabelFor(model => model.Per_ApellidoMaterno, "Apellido Materno", htmlAttributes: new { @class = "control-label" }) -->
                     <!-- @Html.EditorFor(model => model.Per_ApellidoMaterno, new { htmlAttributes = new { @class = "form-control" } }) -->
                     <!-- @Html.ValidationMessageFor(model => model.Per_ApellidoMaterno, "", new { @class = "text-danger" }) -->
@@ -115,7 +165,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Fecha Nacimiento</label>
-                    <input type="text" dataField="Fecha Nacimiento">
+                    <input type="text" class="form-control" dataField="Fecha Nacimiento">
                     <!-- @Html.LabelFor(model => model.Per_FechaNacimiento, "Fecha Nacimiento", htmlAttributes: new { @class = "control-label" }) -->
                     <!-- @Html.EditorFor(model => model.Per_FechaNacimiento, new { htmlAttributes = new { @class = "form-control", @type = "date" } }) -->
                     <!-- @Html.ValidationMessageFor(model => model.Per_FechaNacimiento, "", new { @class = "text-danger" }) -->
@@ -127,7 +177,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Correo Electronico</label>
-                    <input type="text" dataField="Correo Electronico">
+                    <input type="text" class="form-control" dataField="Correo Electronico">
                     <!-- @Html.LabelFor(model => model.Per_CorreoElectronico, "Correo Electronico", htmlAttributes: new { @class = "control-label" }) -->
                     <!-- @Html.EditorFor(model => model.Per_CorreoElectronico, new { htmlAttributes = new { @class = "form-control" } }) -->
                     <!-- @Html.ValidationMessageFor(model => model.Per_CorreoElectronico, "", new { @class = "text-danger" }) -->
@@ -137,7 +187,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Teléfono</label>
-                    <input type="text" dataField="Teléfono">
+                    <input type="text" class="form-control" dataField="Teléfono">
                     <!-- @Html.LabelFor(model => model.Per_Telefono, "Teléfono", htmlAttributes: new { type = "number", @class = "control-label", @minlength = "8" }) -->
                     <!-- @Html.EditorFor(model => model.Per_Telefono, new { htmlAttributes = new { @class = "form-control" } }) -->
                     <!-- @Html.ValidationMessageFor(model => model.Per_Telefono, "", new { @class = "text-danger" }) -->
@@ -149,7 +199,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Dirección</label>
-                    <input type="text" dataField="Dirección">
+                    <input type="text" class="form-control" dataField="Dirección">
                     <!-- @Html.LabelFor(model => model.Per_Direccion, "Dirección", htmlAttributes: new { @class = "control-label" }) -->
                     <!-- @Html.EditorFor(model => model.Per_Direccion, new { htmlAttributes = new { @class = "form-control" } }) -->
                     <!-- @Html.ValidationMessageFor(model => model.Per_Direccion, "", new { @class = "text-danger" }) -->
@@ -159,7 +209,7 @@
                 <div class="col-md-6">
                   <div class="form-group">
                     <label>Sexo</label>
-                    <input type="text" dataField="Sexo">
+                    <input type="text" class="form-control" dataField="Sexo">
                     <!-- @Html.LabelFor(model => model.Per_Sexo, "Sexo", htmlAttributes: new { @class = "control-label" }) -->
                     <!-- @Html.EditorFor(model => model.Per_Sexo, new { htmlAttributes = new { @class = "form-control" } }) -->
                     <!-- @Html.ValidationMessageFor(model => model.Per_Sexo, "", new { @class = "text-danger" }) -->
@@ -181,7 +231,7 @@
         <div class="col-lg-5">
           <div class="card">
             <div class="card-header">
-              <h3>Informción del empleado</h3>
+              <h3>Información del empleado</h3>
             </div>
 
             <div class="card-body">
@@ -190,7 +240,21 @@
                 <div class="col-md-6 col-lg-12">
                   <div class="form-group">
                     <label>Nivel educativo</label>
-                    <input type="text" dataField="Nivel educativo">
+                    
+<div ngbDropdown class="d-inline-block">
+	<button type="button" class="btn btn-outline-primary" id="dropdown1" ngbDropdownToggle>Toggle dropdown</button>
+	<div ngbDropdownMenu aria-labelledby="dropdown1">
+		<!-- items as buttons -->
+		<button ngbDropdownItem>Button (enabled)</button>
+		<button ngbDropdownItem [disabled]="true">Button (disabled, not focusable)</button>
+		<button ngbDropdownItem [class.disabled]="true" aria-disabled="true">Button (disabled, focusable)</button>
+
+		<!-- items as links -->
+		<a href="#" ngbDropdownItem>Link (enabled)</a>
+		<a href="#" ngbDropdownItem [class.disabled]="true" aria-disabled="true">Link (disabled, focusable)</a>
+	</div>
+</div>
+                    <input type="text" class="form-control" dataField="Nivel educativo">
                     <!-- @Html.LabelFor(model => model.Niv_Id, "Nivel educativo", htmlAttributes: new { @class = "control-label" }) -->
                     <!-- @Html.DropDownList("Niv_Id", Model.NivelesEducativosList, "-- Seleccionar Nivel Educativo --", htmlAttributes: new { @class = "form-control" }) -->
                     <!-- @Html.ValidationMessageFor(model => model.Niv_Id, "", new { @class = "text-danger" }) -->
@@ -200,7 +264,7 @@
                 <div class="col-md-6 col-lg-12">
                   <div class="form-group">
                     <label>Curso niveles</label>
-                    <input type="text" dataField="Curso niveles">
+                    <input type="text" class="form-control" dataField="Curso niveles">
                     <!-- @Html.LabelFor(model => model.Cun_Id, "Curso niveles", htmlAttributes: new { @class = "control-label" }) -->
                     <!-- @Html.DropDownList("Cun_Id", new List<SelectListItem>(), "-- Seleccionar Curso --", htmlAttributes: new { @class = "form-control" }) -->
                     <!-- @Html.ValidationMessageFor(model => model.Cun_Id, "", new { @class = "text-danger" }) -->
@@ -212,7 +276,7 @@
                 <div class="col-md-6 col-lg-12">
                   <div class="form-group">
                     <label>Modalidad</label>
-                    <input type="text" dataField="Modalidad">
+                    <input type="text" class="form-control" dataField="Modalidad">
                     <!-- @Html.LabelFor(model => model.Mda_Id, "Modalidad", htmlAttributes: new { @class = "control-label" }) -->
                     <!-- @Html.DropDownList("Mda_Id", new List<SelectListItem>(), "-- Seleccionar Modalidad --", htmlAttributes: new { @class = "form-control" }) -->
                     <!-- @Html.ValidationMessageFor(model => model.Mda_Id, "", new { @class = "text-danger" }) -->
@@ -222,7 +286,7 @@
                 <div class="col-md-6 col-lg-12">
                   <div class="form-group">
                     <label>Cursos</label>
-                    <input type="text" dataField="Cursos">
+                    <input type="text" class="form-control" dataField="Cursos">
                     <!-- @Html.LabelFor(model => model.Cur_Id, "Cursos", htmlAttributes: new { @class = "control-label" }) -->
                     <!-- @Html.DropDownList("Cur_Id", new List<SelectListItem>(), "-- Seleccionar Curso --", htmlAttributes: new { @class = "form-control" }) -->
                     <!-- @Html.ValidationMessageFor(model => model.Cur_Id, "", new { @class = "text-danger" }) -->
@@ -234,7 +298,7 @@
                 <div class="col-md-6 col-lg-12">
                   <div class="form-group">
                     <label>Curso secciones</label>
-                    <input type="text" dataField="Curso secciones">
+                    <input type="text" class="form-control" dataField="Curso secciones">
                     <!-- @Html.LabelFor(model => model.Sec_Id, "Curso secciones", htmlAttributes: new { @class = "control-label" }) -->
                     <!-- @Html.DropDownList("Sec_Id", new List<SelectListItem>(), "-- Seleccionar seccion --", htmlAttributes: new { @class = "form-control" }) -->
                     <!-- @Html.ValidationMessageFor(model => model.Sec_Id, "", new { @class = "text-danger" }) -->
@@ -244,7 +308,7 @@
                 <div class="col-md-6 col-lg-12">
                   <div class="form-group">
                     <label>Estado</label>
-                    <input type="text" dataField="Estado">
+                    <input type="text" class="form-control" dataField="Estado">
                     <!-- @Html.LabelFor(model => model.Est_Id, "Estado", htmlAttributes: new { @class = "control-label" }) -->
                     <!-- @Html.DropDownList("Est_Id", Model.EstadosList, "-- Seleccionar Estado --", htmlAttributes: new { @class = "form-control" }) -->
                     <!-- @Html.ValidationMessageFor(model => model.Est_Id, "", new { @class = "text-danger" }) -->
@@ -256,5 +320,5 @@
         </div>
       </div>
     </form>
-  </div>
+  
 </div>

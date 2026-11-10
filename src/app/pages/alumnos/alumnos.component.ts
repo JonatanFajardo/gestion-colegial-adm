@@ -16,7 +16,7 @@ this.router.navigate(['/alumnos/form']);
 console.log($event.data["alu_Id"])
 }
 updateCell() {
-throw new Error('Method not implemented.');
+  alert("arre")
 }
   alumnos: PR_tbAlumnos_ListResult[];
 
